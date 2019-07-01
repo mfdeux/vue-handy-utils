@@ -31,7 +31,7 @@
     "lint": "eslint lib",
     "preview": "standard-version --dry-run",
     "release": "standard-version && git push --follow-tags && npm publish",
-    "test": "npm run lint && npm run unit",
+    "test": "npm run lint",
     "unit": "jest --maxWorkers=4"
   },
   "husky": {
@@ -77,10 +77,6 @@
   "engines": {
     "node": ">=8.0.0",
     "npm": ">=5.0.0"
-  },
-  "@std/esm": {
-    "mode": "js",
-    "cjs": true
   },
   "eslintConfig": {
     "globals": {
