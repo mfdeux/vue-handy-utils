@@ -34,7 +34,15 @@
     "test": "npm run lint && npm run unit",
     "unit": "jest --maxWorkers=4"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "npm run lint",
+      "pre-push": "npm test"
+    }
+  },
   "peerDependencies": {
+    "moment": "^2.24.0",
     "vue": "^2.5.16"
   },
   "devDependencies": {

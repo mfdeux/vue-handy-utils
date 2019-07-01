@@ -32,6 +32,9 @@ module.exports = {
       }
     ]
   },
+  externals: {
+    moment: 'moment'
+  },
   plugins: [
     new VueLoaderPlugin()
   ]
